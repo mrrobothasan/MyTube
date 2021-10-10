@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardId"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp">
+
+
+    <ImageView
+        android:id="@+id/movieImgId"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher" />
+
+
+
+
+    <Button
+        android:id="@+id/delFromFav"
+        style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="10dp"
+        app:icon="@drawable/ic_close"
+        app:iconTint="@color/red"
+        android:backgroundTint="@color/white"
+        app:cornerRadius="100dp"
+        app:strokeWidth="0dp"
+        app:iconSize="16dp"
+        android:layout_margin="5dp"
+        app:iconGravity="textStart"
+        android:layout_gravity="end"
+        />
+
+</androidx.cardview.widget.CardView>

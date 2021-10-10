@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Android dev/Ikpmd-extra/loginwithfirebase/app/src/main/res/layout/activity_home.xml" value="0.3692708333333333" />
+        <entry key="..\:/Android dev/Ikpmd-extra/loginwithfirebase/app/src/main/res/layout/activity_login.xml" value="0.3692708333333333" />
+        <entry key="..\:/Android dev/Ikpmd-extra/loginwithfirebase/app/src/main/res/layout/activity_main.xml" value="0.3692708333333333" />
+        <entry key="..\:/Android dev/Ikpmd-extra/loginwithfirebase/app/src/main/res/layout/activity_register.xml" value="0.3692708333333333" />
+        <entry key="..\:/Eindopdracht - 1/app/src/main/res/drawable/bottom_sheet_background.xml" value="0.3854166666666667" />
+        <entry key="..\:/Eindopdracht - 1/app/src/main/res/layout/activity_detail.xml" value="0.3692708333333333" />
+        <entry key="..\:/Eindopdracht - 1/app/src/main/res/layout/activity_favorite.xml" value="0.3692708333333333" />
+        <entry key="..\:/Eindopdracht - 1/app/src/main/res/layout/activity_home.xml" value="0.3692708333333333" />
+        <entry key="..\:/Eindopdracht - 1/app/src/main/res/layout/activity_login.xml" value="0.3692708333333333" />
+        <entry key="..\:/Eindopdracht - 1/app/src/main/res/layout/activity_main.xml" value="0.3692708333333333" />
+        <entry key="..\:/Eindopdracht - 1/app/src/main/res/layout/activity_profile.xml" value="0.3692708333333333" />
+        <entry key="..\:/Eindopdracht - 1/app/src/main/res/layout/activity_register.xml" value="0.3692708333333333" />
+        <entry key="..\:/Eindopdracht - 1/app/src/main/res/layout/cardview.xml" value="0.3692708333333333" />
+        <entry key="..\:/Eindopdracht - 1/app/src/main/res/layout/cardview_fav.xml" value="0.33" />
+        <entry key="..\:/Eindopdracht - 1/app/src/main/res/layout/fragment_action.xml" value="0.3692708333333333" />
+        <entry key="..\:/Eindopdracht - 1/app/src/main/res/layout/fragment_comedy.xml" value="0.3692708333333333" />
+        <entry key="..\:/Eindopdracht - 1/app/src/main/res/layout/fragment_drama.xml" value="0.3692708333333333" />
+        <entry key="..\:/Eindopdracht - 1/app/src/main/res/layout/fragment_movies.xml" value="0.3692708333333333" />
+        <entry key="..\:/Eindopdracht - 1/app/src/main/res/layout/fragment_tv.xml" value="0.3692708333333333" />
+        <entry key="..\:/Eindopdracht - 1/app/src/main/res/layout/layout_bottom_sheet.xml" value="0.3692708333333333" />
+        <entry key="..\:/Eindopdracht - 1/app/src/main/res/layout/movie_card.xml" value="0.3692708333333333" />
+        <entry key="..\:/Eindopdracht backup/app/src/main/res/layout/activity_home.xml" value="0.3692708333333333" />
+        <entry key="..\:/Eindopdracht backup/app/src/main/res/layout/activity_profile.xml" value="0.3692708333333333" />
+        <entry key="..\:/Eindopdracht backup/app/src/main/res/layout/layout_bottom_sheet.xml" value="0.3692708333333333" />
+        <entry key="..\:/Eindopdracht backup/app/src/main/res/menu/top_bar.xml" value="0.3692708333333333" />
+        <entry key="..\:/Eindopdracht/app/src/main/res/drawable/bottom_shadow.xml" value="0.2074074074074074" />
+        <entry key="..\:/Eindopdracht/app/src/main/res/drawable/bottom_sheet_background.xml" value="0.3854166666666667" />
+        <entry key="..\:/Eindopdracht/app/src/main/res/drawable/circle.xml" value="0.3854166666666667" />
+        <entry key="..\:/Eindopdracht/app/src/main/res/drawable/ic_baseline_arrow_back.xml" value="0.3854166666666667" />
+        <entry key="..\:/Eindopdracht/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.3854166666666667" />
+        <entry key="..\:/Eindopdracht/app/src/main/res/drawable/ic_baseline_logout.xml" value="0.3854166666666667" />
+        <entry key="..\:/Eindopdracht/app/src/main/res/drawable/ic_baseline_movie.xml" value="0.3854166666666667" />
+        <entry key="..\:/Eindopdracht/app/src/main/res/drawable/ic_baseline_password.xml" value="0.3854166666666667" />
+        <entry key="..\:/Eindopdracht/app/src/main/res/drawable/ic_baseline_person.xml" value="0.3854166666666667" />
+        <entry key="..\:/Eindopdracht/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.2074074074074074" />
+        <entry key="..\:/Eindopdracht/app/src/main/res/drawable/ic_outline_person_outline.xml" value="0.3854166666666667" />
+        <entry key="..\:/Eindopdracht/app/src/main/res/drawable/ic_outline_settings.xml" value="0.3854166666666667" />
+        <entry key="..\:/Eindopdracht/app/src/main/res/drawable/img.xml" value="0.3854166666666667" />
+        <entry key="..\:/Eindopdracht/app/src/main/res/drawable/profile_img_shape.xml" value="0.3854166666666667" />
+        <entry key="..\:/Eindopdracht/app/src/main/res/layout/action_framgent.xml" value="0.3692708333333333" />
+        <entry key="..\:/Eindopdracht/app/src/main/res/layout/activity_home.xml" value="0.3692708333333333" />
+        <entry key="..\:/Eindopdracht/app/src/main/res/layout/activity_login.xml" value="0.3692708333333333" />
+        <entry key="..\:/Eindopdracht/app/src/main/res/layout/activity_main.xml" value="0.3692708333333333" />
+        <entry key="..\:/Eindopdracht/app/src/main/res/layout/activity_profile.xml" value="0.3692708333333333" />
+        <entry key="..\:/Eindopdracht/app/src/main/res/layout/activity_register.xml" value="0.3692708333333333" />
+        <entry key="..\:/Eindopdracht/app/src/main/res/layout/fragment_action.xml" value="0.3692708333333333" />
+        <entry key="..\:/Eindopdracht/app/src/main/res/layout/fragment_comedy.xml" value="0.3692708333333333" />
+        <entry key="..\:/Eindopdracht/app/src/main/res/layout/fragment_drama.xml" value="0.3692708333333333" />
+        <entry key="..\:/Eindopdracht/app/src/main/res/layout/layout_bottom_sheet.xml" value="0.3692708333333333" />
+        <entry key="..\:/Eindopdracht/app/src/main/res/menu/top_bar.xml" value="0.3692708333333333" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

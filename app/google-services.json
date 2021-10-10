@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "490972742527",
+    "project_id": "android-login-1",
+    "storage_bucket": "android-login-1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:490972742527:android:fd4fc18af57bd92cf8104a",
+        "android_client_info": {
+          "package_name": "nl.hasan.loginwithfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "490972742527-aqh0si2i34g763mnlbo6c3q6kpnr1fp4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-fglbKP0IJCQbsFkaRvKoKAPJ7eBB3jI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "490972742527-aqh0si2i34g763mnlbo6c3q6kpnr1fp4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

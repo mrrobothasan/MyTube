@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MyTube</string>
+    <string name="details">Details</string>
+    <string name="favorites">Favorites</string>
+    <string name="movies">Movies</string>
+    <string name="tv_shows">TV Shows</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="title">Title</string>
+    <string name="rating">Rating</string>
+    <string name="overview">Overview</string>
+    <string name="settings">Settings</string>
+</resources>

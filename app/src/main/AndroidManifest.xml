@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="nl.hasan.movieapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo_black"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/logo_black"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MovieApp">
+        <activity
+            android:name="nl.hasan.movieapp.activities.FavoriteActivity"
+            android:exported="true" />
+        <activity
+            android:name="nl.hasan.movieapp.activities.ProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name="nl.hasan.movieapp.activities.HomeActivity"
+            android:exported="true" />
+        <activity
+            android:name="nl.hasan.movieapp.activities.LoginActivity"
+            android:exported="true" />
+        <activity
+            android:name="nl.hasan.movieapp.activities.RegisterActivity"
+            android:exported="true" />
+        <activity
+            android:name="nl.hasan.movieapp.activities.DetailActivity"
+            android:exported="true" />
+        <activity
+            android:name="nl.hasan.movieapp.activities.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
