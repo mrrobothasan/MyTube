@@ -39,7 +39,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginEnd="12dp"
                 android:layout_toStartOf="@+id/menuImg"
-                android:background="@drawable/ic_favorite_border"
+                android:background="@drawable/ic_favorite"
                 android:backgroundTint="@color/red"
                 android:clickable="true"
                 android:focusable="true"
