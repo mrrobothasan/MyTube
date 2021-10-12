@@ -36,14 +36,12 @@ public class RegisterActivity extends AppCompatActivity {
         fName = findViewById(R.id.fname_container);
         lName = findViewById(R.id.lname_container);
         email = findViewById(R.id.email_container);
-        phone = findViewById(R.id.phone_container);
         pass = findViewById(R.id.password_container);
         conPass = findViewById(R.id.confirm_password_container);
         loginBtn = findViewById(R.id.login_text);
 
         fAuth = FirebaseAuth.getInstance();
         db = FirebaseFirestore.getInstance();
-        progressBar = findViewById(R.id.progressBar);
 
         loginBtn.setOnClickListener(v -> {
             startActivity(new Intent(this, LoginActivity.class));
@@ -55,7 +53,6 @@ public class RegisterActivity extends AppCompatActivity {
         String fnameText = fName.getEditText().getText().toString();
         String lnameText = lName.getEditText().getText().toString();
         String emailText = email.getEditText().getText().toString().trim();
-        String phoneText = phone.getEditText().getText().toString().trim();
         String passText = pass.getEditText().getText().toString().trim();
         String conPassText = conPass.getEditText().getText().toString().trim();
 
@@ -76,7 +73,7 @@ public class RegisterActivity extends AppCompatActivity {
             pass.setError("This field is Required");
             return;
         }
-        if (passText.length() < 6) {
+        if (passText.length() < 5) {
             pass.setError("Password must be 8 or more characters long");
             return;
         }
@@ -92,7 +89,6 @@ public class RegisterActivity extends AppCompatActivity {
         // register user
         fAuth.createUserWithEmailAndPassword(emailText, passText).addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
-                progressBar.setVisibility(View.VISIBLE);
                 Toast.makeText(this, "Registered successfully", Toast.LENGTH_SHORT).show();
 
                 // data opslaan in firestore
@@ -102,7 +98,6 @@ public class RegisterActivity extends AppCompatActivity {
                 user.put("fName", fnameText);
                 user.put("lName", lnameText);
                 user.put("email", emailText);
-                user.put("phone", phoneText);
                 user.put("img", null);
 
                 docRef.set(user).addOnSuccessListener(unused -> {

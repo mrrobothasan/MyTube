@@ -35,7 +35,6 @@ public class LoginActivity extends AppCompatActivity {
         emailInput = findViewById(R.id.login_email_container);
         passInput = findViewById(R.id.login_password_container);
 
-        progressBar = findViewById(R.id.progress_login);
         saveLogin = findViewById(R.id.saveLogin);
 
         // database
@@ -68,7 +67,6 @@ public class LoginActivity extends AppCompatActivity {
         // authenticate user
         fAuth.signInWithEmailAndPassword(emailText, passText).addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
-                progressBar.setVisibility(View.VISIBLE);
                 Toast.makeText(this, "Logged in successfully ", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(this, HomeActivity.class));
             } else {

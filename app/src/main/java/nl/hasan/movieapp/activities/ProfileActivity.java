@@ -47,7 +47,6 @@ public class ProfileActivity extends AppCompatActivity {
         imgView = findViewById(R.id.imgView);
         name = findViewById(R.id.nameEdit);
         email = findViewById(R.id.emailEdit);
-        phone = findViewById(R.id.phone);
 
         // database
         fAuth = FirebaseAuth.getInstance();
@@ -90,7 +89,6 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     public void uploadToFirebase(Uri uri) {
-
         StorageReference storageRef = storage.getReference().child(userID + "." + getFileExtension(uri));
 
         if (uri != null) {
@@ -142,7 +140,6 @@ public class ProfileActivity extends AppCompatActivity {
         });
         name.setText(fname);
         email.setText(emailText);
-        phone.setText(phoneText);
 
     }
 }
