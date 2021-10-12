@@ -65,7 +65,7 @@
         android:onClick="checkboxClicked"
         android:text="@string/remember_me" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/login_btn"
         style="?attr/materialButtonOutlinedStyle"
         android:layout_width="match_parent"
