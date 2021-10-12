@@ -47,7 +47,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/reView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_below="@+id/divider5"
         android:layout_marginTop="10dp"
         android:padding="4dp"

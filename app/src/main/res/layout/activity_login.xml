@@ -28,12 +28,13 @@
         app:boxStrokeColor="@color/white"
         app:endIconMode="clear_text"
         app:hintTextColor="@color/white"
-        app:startIconDrawable="@drawable/ic_baseline_email_24">
+        app:startIconDrawable="@drawable/ic_baseline_email_24"
+        >
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:inputType="text" />
+            android:inputType="text"/>
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -99,15 +100,5 @@
             android:textColor="@color/white"
             android:textStyle="bold" />
     </LinearLayout>
-
-    <ProgressBar
-        android:id="@+id/progress_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/login_text_container"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:theme="@style/progressBarBlue"
-        android:visibility="invisible" />
 
 </RelativeLayout>
