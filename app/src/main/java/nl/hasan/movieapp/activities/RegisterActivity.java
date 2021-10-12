@@ -39,6 +39,7 @@ public class RegisterActivity extends AppCompatActivity {
         pass = findViewById(R.id.password_container);
         conPass = findViewById(R.id.confirm_password_container);
         loginBtn = findViewById(R.id.login_text);
+        progressBar = findViewById(R.id.progressBar);
 
         fAuth = FirebaseAuth.getInstance();
         db = FirebaseFirestore.getInstance();
@@ -89,6 +90,7 @@ public class RegisterActivity extends AppCompatActivity {
         // register user
         fAuth.createUserWithEmailAndPassword(emailText, passText).addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
+                progressBar.setVisibility(ProgressBar.VISIBLE);
                 Toast.makeText(this, "Registered successfully", Toast.LENGTH_SHORT).show();
 
                 // data opslaan in firestore

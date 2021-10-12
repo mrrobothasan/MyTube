@@ -8,24 +8,21 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.ProgressBar;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
-
 import nl.hasan.movieapp.R;
 
 public class LoginActivity extends AppCompatActivity {
 
     public TextInputLayout emailInput, passInput;
     public FirebaseAuth fAuth;
-    public ProgressBar progressBar;
     public CheckBox saveLogin;
     public static final String PREFS_NAME = "saveLogin";
     public SharedPreferences preferences;
     public FirebaseFirestore db;
+    public ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +33,7 @@ public class LoginActivity extends AppCompatActivity {
         passInput = findViewById(R.id.login_password_container);
 
         saveLogin = findViewById(R.id.saveLogin);
+        progressBar = findViewById(R.id.progressBar);
 
         // database
         fAuth = FirebaseAuth.getInstance();
@@ -67,6 +65,7 @@ public class LoginActivity extends AppCompatActivity {
         // authenticate user
         fAuth.signInWithEmailAndPassword(emailText, passText).addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
+                progressBar.setVisibility(ProgressBar.VISIBLE);
                 Toast.makeText(this, "Logged in successfully ", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(this, HomeActivity.class));
             } else {
@@ -74,8 +73,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
-
-    public void itemClicked(View v) {
+    public void checkboxClicked(View v) {
         if (saveLogin.isChecked()) {
             SharedPreferences.Editor editor = preferences.edit();
             editor.putBoolean("login", true);
