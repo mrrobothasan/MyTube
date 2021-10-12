@@ -15,11 +15,11 @@ import nl.hasan.movieapp.R;
 import nl.hasan.movieapp.db.MyDBHelper;
 
 public class DetailActivity extends AppCompatActivity {
-    ImageView movieImg;
-    TextView titleView, overviewView, ratingView;
-    String title, poster, overview, userID;
-    int ID;
-    double rating;
+    public ImageView movieImg;
+    public TextView titleView, overviewView, ratingView;
+    public String title, poster, overview, userID;
+    private int ID;
+    public double rating;
     private FirebaseAuth fAuth;
 
     @Override

@@ -33,7 +33,7 @@ public class ProfileActivity extends AppCompatActivity {
     public FirebaseFirestore db;
     public FirebaseStorage storage;
     public SharedPreferences preferences;
-    public TextView name, email, phone;
+    public TextView name, email;
     public DocumentReference docRef;
     public static final String PREFS_NAME = "saveLogin";
     public String userID;
@@ -59,14 +59,12 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     // start an activity for result
-    ActivityResultLauncher<String> myGetContent = registerForActivityResult(new ActivityResultContracts.GetContent(),
-            result -> {
-                if (result != null) {
-                    imgView.setImageURI(result);
-                    imageUri = result;
-                }
-            });
-
+    ActivityResultLauncher<String> myGetContent = registerForActivityResult(new ActivityResultContracts.GetContent(), result -> {
+        if (result != null) {
+            imgView.setImageURI(result);
+            imageUri = result;
+        }
+    });
 
     public void updateProfile(View v) {
         if (imageUri != null) {
@@ -78,10 +76,8 @@ public class ProfileActivity extends AppCompatActivity {
 
     // will run on img click
     public void selectImg(View v) {
-
         // select img from gallery
         myGetContent.launch("image/*");
-
     }
 
     public void back_to_home(View view) {
@@ -123,7 +119,6 @@ public class ProfileActivity extends AppCompatActivity {
 
         String fname = preferences.getString("fname", "");
         String emailText = preferences.getString("email", "");
-        String phoneText = preferences.getString("phone", "");
 
         docRef.addSnapshotListener((value, error) -> {
             if (value != null && value.exists()) {
@@ -135,7 +130,6 @@ public class ProfileActivity extends AppCompatActivity {
                             .load(img)
                             .into(imgView);
                 }
-
             }
         });
         name.setText(fname);

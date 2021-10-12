@@ -1,17 +1,15 @@
 package nl.hasan.movieapp.activities;
 
-import android.annotation.SuppressLint;
-import android.app.ActionBar;
+
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
@@ -30,20 +28,20 @@ import nl.hasan.movieapp.R;
 import nl.hasan.movieapp.adapter.FragmentAdapter;
 
 public class HomeActivity extends AppCompatActivity {
-    private MaterialToolbar toolbar;
-    private FirebaseFirestore db;
-    private String userID, img;
+    public MaterialToolbar toolbar;
+    public FirebaseFirestore db;
+    public String userID, img;
     private FirebaseAuth fAuth;
-    private TextView emailView, nameView;
-    private LinearLayout bottomSheetLayout;
-    private BottomSheetDialog bottomSheetDialog;
-    private SharedPreferences preferences;
+    public TextView emailView, nameView;
+    public LinearLayout bottomSheetLayout;
+    public BottomSheetDialog bottomSheetDialog;
+    public SharedPreferences preferences;
     private DocumentReference docRef;
-    private View layout;
-    private CircleImageView imgView, menuImg;
+    public View layout;
+    public CircleImageView imgView, menuImg;
     private static final String PREFS_NAME = "saveLogin";
-    private TabLayout tabs;
-    private ViewPager2 viewPager;
+    public TabLayout tabs;
+    public ViewPager2 viewPager;
 
 
     @Override
@@ -102,7 +100,6 @@ public class HomeActivity extends AppCompatActivity {
         showUsersData();
     }
 
-    @SuppressLint("SetTextI18n")
     public void showUsersData() {
         // show users data
         nameView = layout.findViewById(R.id.name);
@@ -146,6 +143,8 @@ public class HomeActivity extends AppCompatActivity {
         FirebaseAuth.getInstance().signOut();
         startActivity(new Intent(this, LoginActivity.class));
         finish();
+
+        Toast.makeText(HomeActivity.this, "Logged out successfully", Toast.LENGTH_SHORT).show();
     }
 
     public void navigateToFavorite(View view) {
