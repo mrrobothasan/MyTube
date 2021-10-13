@@ -6,20 +6,20 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
 
-public class MySingleton {
+public class ApiSingleton {
     private RequestQueue requestQueue;
-    private static MySingleton myInstance;
+    private static ApiSingleton myInstance;
     private static Context ctx;
 
 
-    private MySingleton(Context context) {
+    private ApiSingleton(Context context) {
         ctx = context;
         requestQueue = getRequestQueue();
     }
 
-    public static synchronized MySingleton getInstance(Context ctx) {
+    public static synchronized ApiSingleton getInstance(Context ctx) {
         if (myInstance == null) {
-            myInstance = new MySingleton(ctx);
+            myInstance = new ApiSingleton(ctx);
         }
         return myInstance;
     }

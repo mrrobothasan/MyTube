@@ -55,6 +55,6 @@ public class ApiHelper {
             volleyResponseListener.OnError(error.getMessage());
         });
 
-        MySingleton.getInstance(ctx).addToRequestQueue(request);
+        ApiSingleton.getInstance(ctx).addToRequestQueue(request);
     }
 }
