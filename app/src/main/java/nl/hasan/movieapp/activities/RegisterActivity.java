@@ -74,10 +74,6 @@ public class RegisterActivity extends AppCompatActivity {
             pass.setError("This field is Required");
             return;
         }
-        if (passText.length() < 5) {
-            pass.setError("Password must be 8 or more characters long");
-            return;
-        }
         if (TextUtils.isEmpty(conPassText)) {
             conPass.setError("This field is Required");
             return;
@@ -103,7 +99,7 @@ public class RegisterActivity extends AppCompatActivity {
                 user.put("img", null);
 
                 docRef.set(user).addOnSuccessListener(unused -> {
-                    Log.d("succes", "user profile is successfully created");
+                    Log.d("succes", "Account is successfully created");
                 });
                 startActivity(new Intent(this, HomeActivity.class));
             } else {
