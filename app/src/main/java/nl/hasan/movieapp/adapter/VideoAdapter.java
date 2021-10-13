@@ -60,7 +60,6 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoHolder>
 
             ctx.startActivity(intent);
         });
-
     }
 
     @Override

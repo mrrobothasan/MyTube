@@ -37,7 +37,6 @@ public class ApiHelper {
                 JSONArray moviesApi = response.getJSONArray("results");
                 for (int i = 0; i < moviesApi.length(); i++) {
 
-
                     JSONObject firstMovie = (JSONObject) moviesApi.get(i);
                     int ID = firstMovie.getInt("id");
                     String title = firstMovie.getString(titleVid);
@@ -47,7 +46,6 @@ public class ApiHelper {
 
                     Video video = new Video(ID, title, "https://image.tmdb.org/t/p/w500" + poster, overview, rating);
                     videoList.add(video);
-
                 }
                 volleyResponseListener.OnResponse(videoList);
             } catch (JSONException e) {

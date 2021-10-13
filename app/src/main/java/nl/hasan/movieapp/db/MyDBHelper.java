@@ -11,14 +11,22 @@ import androidx.annotation.Nullable;
 
 public class MyDBHelper extends SQLiteOpenHelper {
 
-    private Context ctx;
+    private static Context ctx;
+    private static MyDBHelper mInstance;
     private static final String DATABASE_NAME = "videos.db";
     private static final int DATABASE_VERSION = 5;
 
 
     public MyDBHelper(@Nullable Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
-        this.ctx = context;
+    }
+
+    public static synchronized MyDBHelper getInstance(Context context) {
+        if (mInstance == null) {
+            mInstance = new MyDBHelper(context);
+            ctx = context;
+        }
+        return mInstance;
     }
 
     @Override
@@ -31,7 +39,6 @@ public class MyDBHelper extends SQLiteOpenHelper {
                 MyDBInfo.FavColumn.RATING + " FLOAT, " +
                 MyDBInfo.FavColumn.POSTER + " TEXT);";
         db.execSQL(query);
-
     }
 
     @Override

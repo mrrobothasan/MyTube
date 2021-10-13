@@ -47,12 +47,11 @@ public class FavoriteAdapter extends RecyclerView.Adapter<FavoriteAdapter.MyView
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         Glide.with(ctx).load(poster.get(position)).into(holder.videoImg);
         holder.delFromFav.setOnClickListener(v -> {
-            MyDBHelper myDBHelper = new MyDBHelper(ctx);
+            MyDBHelper myDBHelper = MyDBHelper.getInstance(ctx);
             myDBHelper.delRow(userID,  id.get(position).toString());
 
             Intent intent = new Intent(ctx, FavoriteActivity.class);
             ctx.startActivity(intent);
-
         });
     }
 

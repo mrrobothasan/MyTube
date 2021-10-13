@@ -158,8 +158,7 @@ public class HomeActivity extends AppCompatActivity {
         new TabLayoutMediator(tabs, viewPager, (tab, position) -> {
             if (position == 0) {
                 tab.setText("Movies");
-            }
-            if (position == 1) {
+            }else{
                 tab.setText("TV Shows");
             }
         }).attach();

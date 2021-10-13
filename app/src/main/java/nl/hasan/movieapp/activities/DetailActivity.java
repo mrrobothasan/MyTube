@@ -47,18 +47,14 @@ public class DetailActivity extends AppCompatActivity {
         titleView.setText(title);
         overviewView.setText(overview);
         ratingView.setText(Double.toString(rating));
-
-
     }
 
     public void addToFav(View v) {
-        MyDBHelper myDBHelper = new MyDBHelper(DetailActivity.this);
+        MyDBHelper myDBHelper = MyDBHelper.getInstance(DetailActivity.this);
         myDBHelper.addToFav(userID, ID, title, overview, poster, rating);
     }
 
     public void backHome(View v) {
         startActivity(new Intent(DetailActivity.this, HomeActivity.class));
     }
-
-
 }

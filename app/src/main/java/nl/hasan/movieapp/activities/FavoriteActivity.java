@@ -30,7 +30,7 @@ public class FavoriteActivity extends AppCompatActivity {
 
         favRecView = findViewById(R.id.reView);
 
-        dbHelper = new MyDBHelper(FavoriteActivity.this);
+        dbHelper = MyDBHelper.getInstance(FavoriteActivity.this);
         id = new ArrayList<>();
         title = new ArrayList<>();
         overview = new ArrayList<>();
