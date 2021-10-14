@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -35,8 +36,15 @@ public class MoviesFragment extends Fragment {
         LinearLayoutManager llm = new LinearLayoutManager(ctx);
         movieReView.setLayoutManager(llm);
 
+        adapter = new VideoAdapter();
+        movieReView.setAdapter(adapter);
 
+        setAdapter(ctx);
 
+        return view;
+    }
+
+    public void setAdapter(Context ctx) {
         ApiHelper apiHelper = new ApiHelper(ctx);
 
 
@@ -52,7 +60,5 @@ public class MoviesFragment extends Fragment {
             public void OnError(String msg) {
             }
         });
-
-        return view;
     }
 }

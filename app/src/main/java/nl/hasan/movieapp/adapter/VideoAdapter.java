@@ -31,6 +31,9 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoHolder>
         this.videoList = videoList;
     }
 
+    public VideoAdapter() {
+    }
+
     @NonNull
     @Override
     public VideoHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -64,6 +67,9 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoHolder>
 
     @Override
     public int getItemCount() {
+        if (videoList == null){
+            return 0;
+        }
         return videoList.size();
     }
 

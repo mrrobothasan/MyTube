@@ -21,6 +21,7 @@ import nl.hasan.movieapp.models.Video;
 
 public class ShowsFragment extends Fragment {
     public RecyclerView showReView;
+    VideoAdapter adapter;
     public static final String tvUrl = "https://api.themoviedb.org/3/tv/popular?api_key=3cbe39fc0fea22b0c7e3cb34bc8311a3";
 
     @Nullable
@@ -33,13 +34,21 @@ public class ShowsFragment extends Fragment {
         showReView.setHasFixedSize(true);
         showReView.setLayoutManager(new LinearLayoutManager(ctx));
 
+        adapter = new VideoAdapter();
+        showReView.setAdapter(adapter);
+
+        setAdapter(ctx);
+
+        return view;
+    }
+
+    public void setAdapter(Context ctx) {
         ApiHelper apiHelper = new ApiHelper(ctx);
 
         apiHelper.getVideos(tvUrl, "name", new ApiHelper.VolleyResponseListener() {
-
             @Override
             public void OnResponse(List<Video> videoList) {
-                VideoAdapter adapter = new VideoAdapter(ctx, videoList);
+                adapter = new VideoAdapter(ctx, videoList);
                 showReView.setAdapter(adapter);
             }
 
@@ -47,8 +56,5 @@ public class ShowsFragment extends Fragment {
             public void OnError(String msg) {
             }
         });
-
-        return view;
     }
-
 }

@@ -11,7 +11,6 @@ public class ApiSingleton {
     private static ApiSingleton myInstance;
     private static Context ctx;
 
-
     private ApiSingleton(Context context) {
         ctx = context;
         requestQueue = getRequestQueue();
@@ -24,7 +23,7 @@ public class ApiSingleton {
         return myInstance;
     }
 
-    public RequestQueue getRequestQueue(){
+    public RequestQueue getRequestQueue() {
         if (requestQueue == null) {
             requestQueue = Volley.newRequestQueue(ctx.getApplicationContext());
         }
